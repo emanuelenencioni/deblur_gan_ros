@@ -1,0 +1,3 @@
+[submodule "ghost_deblurgan"]
+	path = ghost_deblurgan
+	url = https://github.com/emanuelenencioni/Ghost-DeblurGAN.git
