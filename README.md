@@ -124,7 +124,7 @@ Verify GPU visibility:
 ```bash
 docker run --rm --gpus all nvidia/cuda:12.6.2-base-ubuntu22.04 nvidia-smi
 ```
-
+So the `--gpus all` flag allows the container to access all GPUs. In case of multiple GPUs, you can also specify the ID.
 ### 2) Build the base image from docker_images
 
 I have an already tested Docker image that I use for research. You can use that.
