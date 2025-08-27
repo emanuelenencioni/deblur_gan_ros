@@ -43,7 +43,7 @@ Follow the installation instructions from the [Ghost-DeblurGAN repository](https
 [options]
 executable = /path/to/your/virtual_env_or_system_env/bin/python3
 ```
-
+Then you can finally build it:
 ```bash
 cd ~/ros2_ws
 colcon build --packages-select deblur_gan_ros
@@ -97,9 +97,9 @@ Packaged weights and config are installed to:
 
 ## Docker
 
-Use your external Dockerfiles from: https://github.com/emanuelenencioni/docker_images
+You can use external Dockerfiles from: https://github.com/emanuelenencioni/docker_images
 
-This lets you build a ROS 2 + (optional) CUDA + PyTorch image once and reuse it for this package. Below are generic steps; consult that repo’s README for the exact Dockerfile path you prefer (GPU or CPU).
+This approach lets you build a ROS 2 + PyTorch + CUDA image once and reuse it across multiple projects. Mount your virtual environment as a volume to avoid recreating dependencies inside the container.
 
 ### 1) Prerequisites
 
