@@ -30,7 +30,12 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
-if you want to use a virtual env, install also `rospkg` and `colcon-common-extensions` into it.
+if you want to use a virtual env, install also the following packages:
+```bash
+pip install rospkg colcon-common-extensions
+conda install -c conda-forge libstdcxx-ng=12
+```
+Without the last package, issues can arise if the `libstdc++` library is outdated or if a conflicting library from the conda environment is installed automatically. Also ensure that `libstdc++6` is installed on your system, otherwise the `GLIBCXX_3.4.30` symbols required by ROS 2 will not be available.
 
 2) Install Python dependencies (PyTorch + Ghost-DeblurGAN requirements)
 Follow the installation instructions from the [Ghost-DeblurGAN repository](https://github.com/emanuelenencioni/Ghost-DeblurGAN).
