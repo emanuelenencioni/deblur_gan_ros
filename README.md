@@ -48,6 +48,7 @@ Follow the installation instructions from the [Ghost-DeblurGAN repository](https
 [options]
 executable = /path/to/your/virtual_env_or_system_env/bin/python3
 ```
+**Note**: Ensure your env use Python 3.10, otherwise it will not work and you will get the error "ModuleNotFoundError: No module named 'rclpy._rclpy_pybind11'".
 Then you can finally build it:
 ```bash
 cd ~/ros2_ws
